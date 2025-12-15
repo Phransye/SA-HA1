@@ -1,5 +1,5 @@
 import React from 'react'
-import japanLandscape from "@/assets/japan-landscape.jpg";
+import japanLandscape from "@/assets/backgrounds/japan-landscape.jpg";
 
 const LandscapeBanner = () => {
   return (

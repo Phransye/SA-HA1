@@ -1,6 +1,6 @@
-import heroSlider1 from "@/assets/hero-slider-1.jpg";
-import heroSlider2 from "@/assets/hero-slider-2.jpg";
-import heroSlider3 from "@/assets/hero-slider-3.jpg";
+import heroSlider1 from "@/assets/backgrounds/hero-slider-1.jpg";
+import heroSlider2 from "@/assets/backgrounds/hero-slider-2.jpg";
+import heroSlider3 from "@/assets/backgrounds/hero-slider-3.jpg";
 
 export const slides = [
   {

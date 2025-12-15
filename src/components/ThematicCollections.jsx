@@ -1,118 +1,60 @@
-import { useState, useEffect, useRef } from "react";
-import { data } from "@/lib/thematic-collection"
+import React from 'react'
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
 
-const spineWidth = 65;
-const totalSpines = 4;
-
-const ThematicCollections = () => {
-  const [activeIndex, setActiveIndex] = useState(3);
-  const containerRef = useRef(null);
-  const viewAreaRef = useRef(null);
-  const spineRefs = useRef([]);
-
-  // Función para actualizar layout
-  const updateLayout = (index) => {
-    if (!containerRef.current || !viewAreaRef.current) return;
-
-    const containerWidth = containerRef.current.offsetWidth;
-
-    const leftSpines = index + 1;
-    const rightSpines = totalSpines - leftSpines;
-
-    const leftMargin = leftSpines * spineWidth;
-    const rightMargin = rightSpines * spineWidth;
-
-    viewAreaRef.current.style.left = `${leftMargin}px`;
-    viewAreaRef.current.style.right = `${rightMargin}px`;
-
-    // Posicionar lomos
-    spineRefs.current.forEach((spine, i) => {
-      if (!spine) return;
-
-      if (i <= index) {
-        spine.style.transform = `translateX(${i * spineWidth}px)`;
-      } else {
-        const relativePos = i - (index + 1);
-        const position = containerWidth - rightMargin + relativePos * spineWidth;
-        spine.style.transform = `translateX(${position}px)`;
-      }
-    });
-  };
-
-  // Seleccionar espina
-  const selectSpine = (index) => {
-    if (index === activeIndex) return;
-    setActiveIndex(index);
-  };
-
-  // Efecto inicial + resize
-  useEffect(() => {
-    updateLayout(activeIndex);
-
-    const handleResize = () => updateLayout(activeIndex);
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [activeIndex]);
-
+const ThematicCollection = ({collections}) => {
   return (
-    <div className="thematic-collections flex justify-center items-center min-h-screen p-5 bg-gray-100">
-      <div
-        className="app-container relative w-full max-w-[1200px] h-[600px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
-        ref={containerRef}
-      >
-        {/* Lomos */}
-        <div className="spines-wrapper absolute w-full h-full z-10">
-          {data.map((item, i) => (
-            <div
-              key={i}
-              ref={(el) => (spineRefs.current[i] = el)}
-              className={`book-spine absolute top-0 w-[65px] h-full border-2 border-black shadow-inner cursor-pointer overflow-hidden transition-transform duration-500 ${
-                i === activeIndex
-                  ? "border-[3px] shadow-[inset_0_0_8px_rgba(0,0,0,0.4),0_0_15px_rgba(0,0,0,0.3)]"
-                  : "hover:scale-[1.03] hover:z-[15] hover:shadow-[inset_0_0_5px_rgba(0,0,0,0.3),0_0_10px_rgba(0,0,0,0.2)]"
-              }`}
-              style={{ left: 0 }}
-              onClick={() => selectSpine(i)}
-            >
-              <img
-                className="spine-img w-full h-full object-cover block border border-black box-border"
-                src={item.imgSpine}
-                alt={`Lomo ${i + 1}`}
-              />
-            </div>
-          ))}
+    <section className="bg-background py-20">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="mb-12 text-center animate-fade-in-up">
+          <h2 className="google-font-title mb-4 text-3xl !font-bold text-foreground md:text-4xl lg:text-[3rem]">
+            Colecciones Temáticas
+          </h2>
+          <p className="google-font-text mx-auto max-w-2xl text-muted-foreground">
+            Descubre nuestras exclusivas colecciones diseñadas con pasión para
+            los verdaderos fans del anime y los videojuegos
+          </p>
         </div>
 
-        {/* Área de vista */}
-        <div
-          className="view-area absolute top-0 h-full flex items-center justify-center p-[1px] bg-white z-5"
-          ref={viewAreaRef}
-        >
-          {data.map((item, i) => (
-            <div
-              key={i}
-              className={`book-page flex flex-col items-center justify-center w-full h-full transition-opacity duration-500 ${
-                i === activeIndex ? "flex" : "hidden"
-              }`}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {collections.map((collection, index) => (
+            <Card
+              key={collection.id}
+              className="group overflow-hidden border-none shadow-md "
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <img
-                className="page-image max-w-full max-h-[75%] object-contain rounded-md shadow-[0_5px_15px_rgba(0,0,0,0.1)] border border-gray-200 mb-4"
-                src={item.imgPage}
-                alt={`Contenido ${i + 1}`}
-              />
-              <div className="page-title text-2xl font-bold text-gray-800 text-center mb-1">
-                {item.title}
+              <div className="relative h-80 overflow-hidden">
+                <img
+                  src={collection.image}
+                  alt={collection.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-70" />
               </div>
-              <div className="page-description text-sm text-gray-500 text-center max-w-[70%]">
-                {item.description}
-              </div>
-            </div>
+              <CardContent className="relative -mt-20 space-y-4 p-6">
+                <div className="rounded-lg bg-card p-6 shadow-lg flex flex-col justify-between min-h-[13rem]">
+                  <div>
+                    <h3 className="google-font-text mb-2 text-2xl !font-semibold text-card-foreground">
+                      {collection.title}
+                    </h3>
+                    <p className="google-font-text mb-4 text-sm text-muted-foreground">
+                      {collection.description}
+                    </p>
+                  </div>
+                  <Button
+                    variant="default"
+                    className="google-font-text btn-green-arcadia !font-medium w-full bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                  >
+                    Ir a la Colección
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
 
-export default ThematicCollections;
+export default ThematicCollection
