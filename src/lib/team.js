@@ -1,9 +1,9 @@
-import tiagoPhoto from "@/assets/team/tiago.png";
-import francisPhoto from "@/assets/team/francis.png";
-import diegoPhoto from "@/assets/team/diego.png";
-import belenPhoto from "@/assets/team/belen.png";
-import brahimPhoto from "@/assets/team/brahim.png";
-import hectorPhoto from "@/assets/team/hector.png";
+import tiagoPhoto from "@/assets/images/team/tiago.png";
+import francisPhoto from "@/assets/images/team/francis.png";
+import diegoPhoto from "@/assets/images/team/diego.png";
+import belenPhoto from "@/assets/images/team/belen.png";
+import brahimPhoto from "@/assets/images/team/brahim.png";
+import hectorPhoto from "@/assets/images/team/hector.png";
 
 export const teamMembers = [
   {

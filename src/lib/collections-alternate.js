@@ -1,6 +1,6 @@
-import collectionAnime from "./../assets/collection-anime.jpg";
-import collectionGaming from "./../assets/collection-gaming.jpg";
-import collectionJapanese from "./../assets/collection-japanese.jpg";
+import collectionAnime from "@/assets/images/collection-anime.jpg";
+import collectionGaming from "@/assets/images/collection-gaming.jpg";
+import collectionJapanese from "@/assets/images/collection-japanese.jpg";
 
 export const collections = [
   {

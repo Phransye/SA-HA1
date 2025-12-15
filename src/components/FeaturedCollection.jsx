@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import sakuraCollectionIMG from "@/assets/images/sakura-collection.png"
 
 const FeaturedCollection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,7 +14,7 @@ const FeaturedCollection = () => {
             {/* Imagen (60% ancho en desktop) */}
             <div className="lg:w-3/5 relative overflow-hidden">
               <img
-                src="/carousel/sakura-collection.png"
+                src={sakuraCollectionIMG}
                 alt="Sakura Collection"
                 className="w-full h-full min-h-[500px] object-cover transform transition-transform duration-700 hover:scale-105"
               />

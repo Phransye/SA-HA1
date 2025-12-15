@@ -1,4 +1,4 @@
-import ThematicCollection from "@/components/ThematicCollection";
+import ThematicCollection from "@/components/ThematicCollections";
 import { collections } from "@/lib/thematic-collection";
 
 const Catalog = () => {
