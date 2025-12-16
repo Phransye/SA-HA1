@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1000,
+        "nombre": "Collar de Among Us",
+        "precio": 29990,
+        "categoria": "Collares",
+        "descripcion": "Collar de Among Us",
+        "imagen": "collar-amongus-01.jpeg"
+    },
+    {
+        "id": 1001,
+        "nombre": "Collar Dragon Ball",
+        "precio": 24990,
+        "categoria": "Collares",
+        "descripcion": "Mochila resistente al agua con capacidad de 25L.",
+        "imagen": "collar-dragon-ball-01.png"
+    },
+    {
+        "id": 1002,
+        "nombre": "Collar One Piece",
+        "precio": 14990,
+        "categoria": "Collares",
+        "descripcion": "Botella de acero inoxidable que mantiene bebidas frías por 12h.",
+        "imagen": "collar-onpiece.jpeg"
+    },
+    {
+        "id": 1003,
+        "nombre": "Collar Spider-Man",
+        "precio": 59990,
+        "categoria": "Collares",
+        "descripcion": "Teclado mecánico con switches blue y retroiluminación RGB.",
+        "imagen": "collar-spiderman.png"
+    },
+    {
+        "id": 1004,
+        "nombre": "Collar Sailor Moon",
+        "precio": 39990,
+        "categoria": "Collares",
+        "descripcion": "Zapatillas deportivas transpirables para uso diario.",
+        "imagen": "collar-sailor-moon.png"
+    },
+    {
+        "id": 2000,
+        "nombre": "Anillo de Pikachu",
+        "precio": 29990,
+        "categoria": "Anillos",
+        "descripcion": "Audífonos Bluetooth con cancelación de ruido y estuche de carga rápida.",
+        "imagen": "anillo-pikachu-02.png"
+    },
+    {
+        "id": 2001,
+        "nombre": "Anillo Dragon Ball",
+        "precio": 24990,
+        "categoria": "Anillos",
+        "descripcion": "Mochila resistente al agua con capacidad de 25L.",
+        "imagen": "anillo-dragon-ball.jpeg"
+    },
+    {
+        "id": 2002,
+        "nombre": "Anillo de Eevee",
+        "precio": 14990,
+        "categoria": "Anillos",
+        "descripcion": "Botella de acero inoxidable que mantiene bebidas frías por 12h.",
+        "imagen": "anillo-pokemon-sincolor.jpeg"
+    },
+    {
+        "id": 2003,
+        "nombre": "Anillo Magical Doremi",
+        "precio": 59990,
+        "categoria": "Anillos",
+        "descripcion": "Teclado mecánico con switches blue y retroiluminación RGB.",
+        "imagen": "anillo-magical-doremi.jpeg"
+    },
+    {
+        "id": 2004,
+        "nombre": "Anillo Sakura Cardcaptor",
+        "precio": 39990,
+        "categoria": "Anillos",
+        "descripcion": "Zapatillas deportivas transpirables para uso diario.",
+        "imagen": "anillo-sakura-cardcaptor-01.png"
+    },
+    {
+        "id": 3000,
+        "nombre": "Aro Kimetsu Obanai",
+        "precio": 29990,
+        "categoria": "Aros",
+        "descripcion": "Audífonos Bluetooth con cancelación de ruido y estuche de carga rápida.",
+        "imagen": "aro-kimetsu-obanai.png"
+    },
+    {
+        "id": 3001,
+        "nombre": "Aro Kimetsu Shinobu",
+        "precio": 24990,
+        "categoria": "Aros",
+        "descripcion": "Mochila resistente al agua con capacidad de 25L.",
+        "imagen": "aro-kimetsu-shinobu-01.png"
+    },
+    {
+        "id": 3002,
+        "nombre": "Aro Kimetsu Tanjiro",
+        "precio": 14990,
+        "categoria": "Aros",
+        "descripcion": "Botella de acero inoxidable que mantiene bebidas frías por 12h.",
+        "imagen": "aro-kimetsu-tanjiro-01.png"
+    },
+    {
+        "id": 3003,
+        "nombre": "Aro Sailor Moon",
+        "precio": 59990,
+        "categoria": "Aros",
+        "descripcion": "Teclado mecánico con switches blue y retroiluminación RGB.",
+        "imagen": "aro-sailor-moon.png"
+    },
+    {
+        "id": 4000,
+        "nombre": "Pulsera Dragon Ball",
+        "precio": 29990,
+        "categoria": "Pulseras",
+        "descripcion": "Audífonos Bluetooth con cancelación de ruido y estuche de carga rápida.",
+        "imagen": "pulsera-dragon-ball.png"
+    }
+]

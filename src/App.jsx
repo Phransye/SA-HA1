@@ -4,10 +4,11 @@ import { ToastContainer } from "react-toastify";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
-import Catalog from "./pages/Catalog";
+import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
+import Catalog from "./pages/Catalog";
 
 const App = () => {
   useEffect(() => {
@@ -18,12 +19,13 @@ const App = () => {
   return (
     <Fragment>
       <Nav />
-      <ToastContainer/>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalogo" element={<Catalog />} />
         <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/productos" element={<Products />} />
 
         {/* Ruta para páginas no encontradas */}
         <Route path="*" element={<NotFound />} />
