@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 import Catalog from "./pages/Catalog";
+import AdminProductos from "./pages/AdminProductos";
 
 const App = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/productos" element={<Products />} />
+        <Route path="/crear-producto" element={<AdminProductos />} />
 
         {/* Ruta para páginas no encontradas */}
         <Route path="*" element={<NotFound />} />
